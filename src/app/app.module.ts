@@ -1,9 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { translations, translationChunksConfig } from '@spartacus/assets';
-import { B2cStorefrontModule } from '@spartacus/storefront';
+import {AppComponent} from './app.component';
+import {translations, translationChunksConfig} from '@spartacus/assets';
+import {B2cStorefrontModule} from '@spartacus/storefront';
+import {OutletsModule} from './outlets/outlets.module';
+import {CmsComponentsModule} from './cms-components/cms-components.module';
 
 @NgModule({
   declarations: [
@@ -29,9 +31,12 @@ import { B2cStorefrontModule } from '@spartacus/storefront';
       features: {
         level: '3.0'
       }
-    })
+    }),
+    OutletsModule,
+    CmsComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
