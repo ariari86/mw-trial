@@ -14,7 +14,7 @@ import { B2cStorefrontModule } from '@spartacus/storefront';
     B2cStorefrontModule.withConfig({
       backend: {
         occ: {
-          baseUrl: 'https://localhost:9002'
+          baseUrl: 'https://spartacus-training.eastus.cloudapp.azure.com:8443'
         }
       },
       context: {
