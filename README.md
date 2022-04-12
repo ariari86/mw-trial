@@ -1,6 +1,6 @@
 # MwTrial
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12. Node version should match 10.13.x/12.11.x or later minor.
 
 ## Tasks:
 
