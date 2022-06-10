@@ -1,11 +1,15 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
-import {AppComponent} from './app.component';
-import {translations, translationChunksConfig} from '@spartacus/assets';
-import {B2cStorefrontModule} from '@spartacus/storefront';
 import {OutletsModule} from './outlets/outlets.module';
 import {CmsComponentsModule} from './cms-components/cms-components.module';
+
+import { AppComponent } from './app.component';
+import { SpartacusModule } from './spartacus/spartacus.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from '@spartacus/storefront';
+
 
 @NgModule({
   declarations: [
@@ -13,25 +17,11 @@ import {CmsComponentsModule} from './cms-components/cms-components.module';
   ],
   imports: [
     BrowserModule,
-    B2cStorefrontModule.withConfig({
-      backend: {
-        occ: {
-          baseUrl: 'https://localhost:9002'
-        }
-      },
-      context: {
-        currency: ['USD'],
-        language: ['en'],
-      },
-      i18n: {
-        resources: translations,
-        chunks: translationChunksConfig,
-        fallbackLang: 'en'
-      },
-      features: {
-        level: '3.0'
-      }
-    }),
+    AppRoutingModule,
+    HttpClientModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
+    SpartacusModule,
     OutletsModule,
     CmsComponentsModule
   ],
