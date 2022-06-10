@@ -2,8 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { translations, translationChunksConfig } from '@spartacus/assets';
-import { B2cStorefrontModule } from '@spartacus/storefront';
+import { SpartacusModule } from './spartacus/spartacus.module';
+import { AppRoutingModule } from './app-routing.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -11,25 +15,11 @@ import { B2cStorefrontModule } from '@spartacus/storefront';
   ],
   imports: [
     BrowserModule,
-    B2cStorefrontModule.withConfig({
-      backend: {
-        occ: {
-          baseUrl: 'https://spartacus-demo.eastus.cloudapp.azure.com:8443'
-        }
-      },
-      context: {
-        currency: ['USD'],
-        language: ['en'],
-      },
-      i18n: {
-        resources: translations,
-        chunks: translationChunksConfig,
-        fallbackLang: 'en'
-      },
-      features: {
-        level: '3.0'
-      }
-    })
+    AppRoutingModule,
+    HttpClientModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
+    SpartacusModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
