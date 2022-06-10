@@ -12,7 +12,7 @@ import { provideConfig } from '@spartacus/core';
   providers: [
     provideConfig({
     cmsComponents: {
-      EnhancedProductSummaryComponent: {
+      ProductSummaryComponent: {
         component: EnhancedProductSummaryComponent
       }
     }
