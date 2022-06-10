@@ -1,33 +1,41 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { 
+import { NgModule } from '@angular/core';
+import { AsmComponentsModule } from "@spartacus/asm/components";
+import { AsmOccModule } from "@spartacus/asm/occ";
+import { OrderConfirmationModule, ReplenishmentOrderConfirmationModule } from "@spartacus/checkout/components";
+import { CheckoutCoreModule } from "@spartacus/checkout/core";
+import { CheckoutOccModule } from "@spartacus/checkout/occ";
+import {
+  AnonymousConsentsModule,
+  AuthModule,
+  CartModule,
+  CartOccModule,
+  CostCenterOccModule,
+  ExternalRoutesModule,
+  ProductModule,
+  ProductOccModule,
+  UserOccModule
+} from '@spartacus/core';
+import { QualtricsComponentsModule } from "@spartacus/qualtrics/components";
+import {
   AddressBookModule,
   AnonymousConsentManagementBannerModule,
   AnonymousConsentsDialogModule,
-  AsmModule,
   BannerCarouselModule,
   BannerModule,
   BreadcrumbModule,
   CartComponentModule,
   CartPageEventModule,
   CategoryNavigationModule,
-  CloseAccountModule,
   CmsParagraphModule,
   ConsentManagementModule,
   FooterNavigationModule,
-  ForgotPasswordModule,
   HamburgerMenuModule,
   LinkModule,
   MyCouponsModule,
   MyInterestsModule,
   NavigationModule,
   NotificationPreferenceModule,
-  OrderCancellationModule,
-  OrderConfirmationModule,
-  OrderDetailsModule,
-  OrderHistoryModule,
-  OrderReturnModule,
-  PageEventModule,
   PaymentMethodsModule,
   ProductCarouselModule,
   ProductDetailsPageModule,
@@ -40,50 +48,24 @@ import {
   ProductReferencesModule,
   ProductSummaryModule,
   ProductTabsModule,
-  ProductVariantsModule,
-  QualtricsModule,
-  ReplenishmentOrderConfirmationModule,
-  ReplenishmentOrderDetailsModule,
-  ReplenishmentOrderHistoryModule,
-  ResetPasswordModule,
-  ReturnRequestDetailModule,
-  ReturnRequestListModule,
   SearchBoxModule,
   SiteContextSelectorModule,
   StockNotificationModule,
   TabParagraphContainerModule,
-  UpdateEmailModule,
-  UpdatePasswordModule,
-  UpdateProfileModule,
   UserComponentModule,
-  WishListModule 
+  WishListModule
 } from '@spartacus/storefront';
-import { 
-  AnonymousConsentsModule,
-  AsmOccModule,
-  AuthModule,
-  CartModule, 
-  CartOccModule, 
-  CheckoutModule,
-  CheckoutOccModule,
-  CostCenterOccModule,
-  ExternalRoutesModule,
-  PersonalizationModule,
-  ProductModule,
-  ProductOccModule,
-  SmartEditModule, 
-  UserModule, 
-  UserOccModule} from '@spartacus/core';
-
-
+import { CloseAccountModule, ForgotPasswordModule, ResetPasswordModule, UpdateEmailModule, UpdatePasswordModule, UpdateProfileModule } from "@spartacus/user/profile/components";
+import { CheckoutFeatureModule } from './features/checkout/checkout-feature.module';
+import { UserFeatureModule } from './features/user/user-feature.module';
+import { AsmFeatureModule } from './features/asm/asm-feature.module';
+import { QualtricsFeatureModule } from './features/qualtrics/qualtrics-feature.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    AsmModule,
-    SmartEditModule.forRoot(),
-    PersonalizationModule.forRoot(),
+    AsmComponentsModule,
     ProductDetailsPageModule,
     ProductListingPageModule,
     ExternalRoutesModule,
@@ -98,19 +80,13 @@ import {
     BreadcrumbModule,
     SearchBoxModule,
     SiteContextSelectorModule,
-    QualtricsModule,
+    QualtricsComponentsModule,
     AddressBookModule,
-    OrderHistoryModule,
-    OrderCancellationModule,
-    OrderReturnModule,
-    ReturnRequestListModule,
-    ReturnRequestDetailModule,
     ProductListModule,
     ProductFacetNavigationModule,
     ProductTabsModule,
     ProductCarouselModule,
     ProductReferencesModule,
-    OrderDetailsModule,
     PaymentMethodsModule,
     ConsentManagementModule,
     CartComponentModule,
@@ -118,7 +94,6 @@ import {
     OrderConfirmationModule,
     ProductImagesModule,
     ProductSummaryModule,
-    ProductVariantsModule,
     ProductIntroModule,
     BannerCarouselModule,
     MyCouponsModule,
@@ -126,9 +101,7 @@ import {
     NotificationPreferenceModule,
     MyInterestsModule,
     StockNotificationModule,
-    ReplenishmentOrderHistoryModule,
     ReplenishmentOrderConfirmationModule,
-    ReplenishmentOrderDetailsModule,
     UserComponentModule,
     CloseAccountModule,
     UpdateEmailModule,
@@ -140,11 +113,9 @@ import {
     AuthModule.forRoot(),
     AnonymousConsentsModule.forRoot(),
     CartModule.forRoot(),
-    CheckoutModule.forRoot(),
-    UserModule.forRoot(),
+    CheckoutCoreModule,
     ProductModule.forRoot(),
     CartPageEventModule,
-    PageEventModule,
     ProductPageEventModule,
     AsmOccModule,
     CartOccModule,
@@ -152,6 +123,10 @@ import {
     ProductOccModule,
     UserOccModule,
     CostCenterOccModule,
+    CheckoutFeatureModule,
+    UserFeatureModule,
+    AsmFeatureModule,
+    QualtricsFeatureModule,
   ]
 })
 export class SpartacusFeaturesModule { }
