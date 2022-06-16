@@ -1,6 +1,8 @@
 # MwTrial
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12. Node version should match 10.13.x/12.11.x or later minor.
+Angular CLI: Version 12.0.5 or later, < 13.
+Yarn: Version 1.15 or later.
+Node.js: The most recent 14.x version is required. 
 
 ## Tasks:
 
