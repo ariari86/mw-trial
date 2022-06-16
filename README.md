@@ -1,8 +1,8 @@
 # MwTrial
 
-Angular CLI: Version 12.0.5 or later, < 13.
-Yarn: Version 1.15 or later.
-Node.js: The most recent 14.x version is required. 
+- Angular CLI: Version 12.0.5 or later, < 13.
+- Yarn: Version 1.15 or later.
+- Node.js: The most recent 14.x version is required. 
 
 ## Tasks:
 
