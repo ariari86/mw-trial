@@ -7,11 +7,13 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '@spartacus/storefront';
+import { HelloWorldComponent } from './hello-world/hello-world.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HelloWorldComponent
   ],
   imports: [
     BrowserModule,

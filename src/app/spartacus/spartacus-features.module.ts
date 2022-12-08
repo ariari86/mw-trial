@@ -36,6 +36,7 @@ import {
   MyInterestsModule,
   NavigationModule,
   NotificationPreferenceModule,
+  OutletPosition,
   PaymentMethodsModule,
   ProductCarouselModule,
   ProductDetailsPageModule,
@@ -48,6 +49,7 @@ import {
   ProductReferencesModule,
   ProductSummaryModule,
   ProductTabsModule,
+  provideOutlet,
   SearchBoxModule,
   SiteContextSelectorModule,
   StockNotificationModule,
@@ -60,6 +62,7 @@ import { CheckoutFeatureModule } from './features/checkout/checkout-feature.modu
 import { UserFeatureModule } from './features/user/user-feature.module';
 import { AsmFeatureModule } from './features/asm/asm-feature.module';
 import { QualtricsFeatureModule } from './features/qualtrics/qualtrics-feature.module';
+import { HelloWorldComponent } from '../hello-world/hello-world.component';
 
 @NgModule({
   declarations: [],
@@ -127,6 +130,13 @@ import { QualtricsFeatureModule } from './features/qualtrics/qualtrics-feature.m
     UserFeatureModule,
     AsmFeatureModule,
     QualtricsFeatureModule,
-  ]
+  ],
+  providers: [
+    provideOutlet({
+      id: 'PDP.PRICE',
+      position: OutletPosition.AFTER,
+      component: HelloWorldComponent,
+    }),
+]
 })
 export class SpartacusFeaturesModule { }
