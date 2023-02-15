@@ -1,4 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
-
 $styleVersion: 3.0;
+$skipComponentStyles: (cx-mini-cart);
+
+@import 'custom-component';
+@import 'mw-theme.scss';
 @import '~@spartacus/styles/index';
+
+:root {
+  --cx-color-primary: #ef7b05;
+}
+
+cx-mini-cart {
+  a {
+    background: none;
+    position: relative;
+
+    .count {
+      position: absolute;
+      bottom: 18px;
+      left: 27px;
+    }
+  }
+
+  a:hover {
+
+    .count {
+      bottom: 22px;
+      transition-duration: 500ms;
+      font-size: large;
+    }
+  }
+
+  cx-icon {
+    color: var(--cx-color-primary);
+    font-size: 30px;
+  }
+
+  cx-icon:hover {
+    color: var(--cx-color-success);
+  }
+
+  .total {
+    display: none;
+  }
+}

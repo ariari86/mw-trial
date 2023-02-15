@@ -30,12 +30,14 @@ import {
   CmsParagraphModule,
   ConsentManagementModule,
   FooterNavigationModule,
+  GenericLinkModule,
   HamburgerMenuModule,
   LinkModule,
   MyCouponsModule,
   MyInterestsModule,
   NavigationModule,
   NotificationPreferenceModule,
+  OutletPosition,
   PaymentMethodsModule,
   ProductCarouselModule,
   ProductDetailsPageModule,
@@ -48,6 +50,7 @@ import {
   ProductReferencesModule,
   ProductSummaryModule,
   ProductTabsModule,
+  provideOutlet,
   SearchBoxModule,
   SiteContextSelectorModule,
   StockNotificationModule,
@@ -60,9 +63,12 @@ import { CheckoutFeatureModule } from './features/checkout/checkout-feature.modu
 import { UserFeatureModule } from './features/user/user-feature.module';
 import { AsmFeatureModule } from './features/asm/asm-feature.module';
 import { QualtricsFeatureModule } from './features/qualtrics/qualtrics-feature.module';
+import { CustomHeaderComponent } from '../custom-header/custom-header.component';
+import { InformationBarComponent } from '../information-bar/information-bar.component';
+
 
 @NgModule({
-  declarations: [],
+  declarations: [CustomHeaderComponent, InformationBarComponent],
   imports: [
     CommonModule,
     AsmComponentsModule,
@@ -127,6 +133,19 @@ import { QualtricsFeatureModule } from './features/qualtrics/qualtrics-feature.m
     UserFeatureModule,
     AsmFeatureModule,
     QualtricsFeatureModule,
+    GenericLinkModule
+  ],
+  providers: [
+    provideOutlet({
+      id: 'SiteLogo',
+      position: OutletPosition.REPLACE,
+      component: CustomHeaderComponent,
+    }),
+    provideOutlet({
+      id: 'BottomHeaderSlot',
+      position: OutletPosition.REPLACE,
+      component: InformationBarComponent,
+    }),
   ]
 })
 export class SpartacusFeaturesModule { }
