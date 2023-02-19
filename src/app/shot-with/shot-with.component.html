@@ -1,0 +1,7 @@
+<ng-template cxOutletRef="Section5" cxOutletPos="before">
+  <ng-container  *ngIf="product$ | async as product">
+    <div class="grid-container">
+      <img class="picture" *ngFor="let item of product" [src]="item.download_url">
+    </div>
+  </ng-container>
+</ng-template>

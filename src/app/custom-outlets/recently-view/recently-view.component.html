@@ -1,0 +1,9 @@
+<ng-template cxOutletRef="cx-footer" cxOutletPos="before">
+  <div *ngIf="resetViewProducts$ | async as products">
+    <cx-product-list-item
+      *ngFor="let product of products"
+      [product]="product"
+      class="cx-product-search-list">
+    </cx-product-list-item>
+  </div>
+</ng-template>

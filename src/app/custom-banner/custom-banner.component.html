@@ -1,0 +1,6 @@
+<ng-container>
+  <ng-container *ngIf="product$ | async as product">
+    <cx-product-list-item [product]="product"></cx-product-list-item>
+  </ng-container>
+</ng-container>
+

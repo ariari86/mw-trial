@@ -65,10 +65,11 @@ import { AsmFeatureModule } from './features/asm/asm-feature.module';
 import { QualtricsFeatureModule } from './features/qualtrics/qualtrics-feature.module';
 import { CustomHeaderComponent } from '../custom-header/custom-header.component';
 import { InformationBarComponent } from '../information-bar/information-bar.component';
+import { CustomBannerComponent } from '../custom-banner/custom-banner.component';
 
 
 @NgModule({
-  declarations: [CustomHeaderComponent, InformationBarComponent],
+  declarations: [CustomHeaderComponent, InformationBarComponent, CustomBannerComponent],
   imports: [
     CommonModule,
     AsmComponentsModule,
@@ -127,6 +128,7 @@ import { InformationBarComponent } from '../information-bar/information-bar.comp
     CartOccModule,
     CheckoutOccModule,
     ProductOccModule,
+    ProductListModule,
     UserOccModule,
     CostCenterOccModule,
     CheckoutFeatureModule,
@@ -145,6 +147,11 @@ import { InformationBarComponent } from '../information-bar/information-bar.comp
       id: 'BottomHeaderSlot',
       position: OutletPosition.REPLACE,
       component: InformationBarComponent,
+    }),
+    provideOutlet({
+      id: 'Section1',
+      position: OutletPosition.REPLACE,
+      component: CustomBannerComponent,
     }),
   ]
 })
