@@ -19,6 +19,7 @@ export class CartQuantityComponent implements OnInit {
     switchMap((product: Product) => this.cartService.getEntry(product.code)),
     map((cart: OrderEntry)=> cart ? cart.quantity : 0)
   )
+
   constructor(private currentProductService: CurrentProductService, private cartService: ActiveCartService) { }
 
   ngOnInit(): void {

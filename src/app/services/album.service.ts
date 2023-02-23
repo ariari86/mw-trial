@@ -13,6 +13,6 @@ export class AlbumService {
   constructor(private http: HttpClient) { }
 
   getPicture(): Observable<IPicture[]> {
-    return this.http.get<IPicture[]>(`${BASE_URL}/v2/list?limit=6`)
+    return this.http.get<IPicture[]>(`${BASE_URL}/v2/list?limit=8`)
   }
 }

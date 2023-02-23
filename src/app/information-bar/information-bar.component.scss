@@ -6,11 +6,12 @@
 
 .info-bar-container {
   background-color: #fdf8e4;
-  color: #9c9177;
+  color: #020202;
   padding: 30px;
   border-radius: 15px;
   margin-top: 10px;
   border: 3px solid rgb(255, 119, 0);
+  animation: blinken 1s infinite;
 
   &:hover {
     background-color: orange;
@@ -30,6 +31,11 @@
   &:hover {
     color: red;
   }
+}
 
 
+@keyframes blinken {
+  0% {background-color: rgb(247, 226, 219); box-shadow: 1px 5px 10px rgba(9, 7, 7, 0.9);}
+  50% {background-color: rgb(255, 230, 0); box-shadow: 1px 5px 10px rgba(200,20,20, 0.9);}
+  100% {background-color: rgb(255, 145, 0); box-shadow: 1px 5px 310x rgba(200,20,20, 0.9);}
 }
