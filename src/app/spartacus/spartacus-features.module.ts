@@ -63,9 +63,10 @@ import { UserFeatureModule } from './features/user/user-feature.module';
 import { AsmFeatureModule } from './features/asm/asm-feature.module';
 import { QualtricsFeatureModule } from './features/qualtrics/qualtrics-feature.module';
 import { HelloWorldComponent } from '../hello-world/hello-world.component';
+import { ProductAlbumComponent } from '../product-album/product-album.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [HelloWorldComponent],
   imports: [
     CommonModule,
     AsmComponentsModule,
@@ -136,6 +137,11 @@ import { HelloWorldComponent } from '../hello-world/hello-world.component';
       id: 'PDP.PRICE',
       position: OutletPosition.AFTER,
       component: HelloWorldComponent,
+    }),
+    provideOutlet({
+      id: 'UpSelling',
+      position: OutletPosition.BEFORE,
+      component: ProductAlbumComponent,
     }),
 ]
 })

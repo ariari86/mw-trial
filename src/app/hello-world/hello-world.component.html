@@ -1,1 +1,5 @@
 <p>HELLO WORLD!</p>
+
+<ng-container *ngIf="product$ | async as product">
+    {{ product.availableForPickup ? 'Item is available' : 'Item is not avalable' }}
+</ng-container>

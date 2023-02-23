@@ -8,12 +8,13 @@ import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '@spartacus/storefront';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
+import { ProductAlbumComponent } from './product-album/product-album.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloWorldComponent
+    ProductAlbumComponent,
   ],
   imports: [
     BrowserModule,

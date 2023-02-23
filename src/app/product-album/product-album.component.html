@@ -1,0 +1,8 @@
+<ng-container *ngIf="pictures$ | async as pictures">
+    <div class="grid-container">
+      <img
+      class="picture"
+      *ngFor="let item of pictures"
+      [src]="item.download_url" >
+    </div>
+</ng-container>
