@@ -36,6 +36,9 @@
               "src/styles/spartacus/asm.scss",
               "src/styles/spartacus/qualtrics-embedded-feedback.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/override"]
+            },
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,

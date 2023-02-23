@@ -30,6 +30,7 @@ import {
   CmsParagraphModule,
   ConsentManagementModule,
   FooterNavigationModule,
+  GenericLinkModule,
   HamburgerMenuModule,
   LinkModule,
   MyCouponsModule,
@@ -62,11 +63,12 @@ import { CheckoutFeatureModule } from './features/checkout/checkout-feature.modu
 import { UserFeatureModule } from './features/user/user-feature.module';
 import { AsmFeatureModule } from './features/asm/asm-feature.module';
 import { QualtricsFeatureModule } from './features/qualtrics/qualtrics-feature.module';
-import { HelloWorldComponent } from '../hello-world/hello-world.component';
-import { ProductAlbumComponent } from '../product-album/product-album.component';
+import { CustomHeaderComponent } from '../custom-header/custom-header.component';
+import { InformationBarComponent } from '../information-bar/information-bar.component';
+
 
 @NgModule({
-  declarations: [HelloWorldComponent],
+  declarations: [CustomHeaderComponent, InformationBarComponent],
   imports: [
     CommonModule,
     AsmComponentsModule,
@@ -131,18 +133,19 @@ import { ProductAlbumComponent } from '../product-album/product-album.component'
     UserFeatureModule,
     AsmFeatureModule,
     QualtricsFeatureModule,
+    GenericLinkModule
   ],
   providers: [
     provideOutlet({
-      id: 'PDP.PRICE',
-      position: OutletPosition.AFTER,
-      component: HelloWorldComponent,
+      id: 'SiteLogo',
+      position: OutletPosition.REPLACE,
+      component: CustomHeaderComponent,
     }),
     provideOutlet({
-      id: 'UpSelling',
-      position: OutletPosition.BEFORE,
-      component: ProductAlbumComponent,
+      id: 'BottomHeaderSlot',
+      position: OutletPosition.REPLACE,
+      component: InformationBarComponent,
     }),
-]
+  ]
 })
 export class SpartacusFeaturesModule { }
