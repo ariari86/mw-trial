@@ -8,7 +8,7 @@ import { translations, translationChunksConfig } from '@spartacus/assets';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   providers: [
 
@@ -42,7 +42,7 @@ import { translations, translationChunksConfig } from '@spartacus/assets';
     provideConfig(layoutConfig),
     provideConfig(mediaConfig),
     ...defaultCmsContentProviders,
-  
+
   ]
 })
 export class SpartacusConfigurationModule { }

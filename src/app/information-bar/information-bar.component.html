@@ -1,11 +1,15 @@
-<ng-container>
-  <div class="info-bar-container">
-    <h4>Covid-19</h4>
+<div class="main" *ngIf="isCollapsed">
+  <ng-container>
+    <div class="info-bar-container">
+      <div (click)="closeButton()">
+        <fa-icon class="btn-close" [icon]="faWindowClose"></fa-icon>
+      </div>
+      <h4>Covid-19</h4>
+      <p>
+        <u>the first known case</u> was  <a href="Identified in Wuhan">identified in Wuhan</a>, China in December 2019. [5] the diseas quickly spread wordwide, resulting in the Covid-19 pandenic
+      </p>
 
-    <p>
-      <u>the first known case</u> was  <a href="Identified in Wuhan">identified in Wuhan</a>, China in December 2019. [5] the diseas quickly spread wordwide, resulting in the Covid-19 pandenic
-    </p>
-
-    <a href="https://www.google.com/covid"></a>
-  </div>
-</ng-container>
+      <a href="https://www.google.com/covid"></a>
+    </div>
+  </ng-container>
+</div>

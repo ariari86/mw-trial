@@ -9,6 +9,7 @@ import { AppRoutingModule } from '@spartacus/storefront';
 import { CmsConfig, Config, ConfigModule } from '@spartacus/core';
 import { LogoutConfig } from './session/logout-config';
 import { CustomOutletsModule } from './custom-outlets/custom-outlets.module';
+import { ProductAlbumComponent } from './product-album/product-album.component';
 
 export const translationOverWrites = {
   en:{
@@ -37,7 +38,7 @@ export const translationOverWrites = {
       {logoutConfig:
         {
           enable: true,
-          logoutTimeout: 300000
+          logoutTimeout: 3000000
         }
       } as CmsConfig
       )

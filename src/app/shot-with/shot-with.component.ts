@@ -23,6 +23,6 @@ export class ShotWithComponent implements OnInit {
   }
 
   getGivenCamera(): Observable<IPicture[]>{
-    return this.http.get<IPicture[]>(`${BASE_URL}/v2/list?limit=3`)
+    return this.http.get<IPicture[]>(`${BASE_URL}/v2/list?limit=12`)
   }
 }

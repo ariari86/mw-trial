@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-information-bar',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./information-bar.component.scss']
 })
 export class InformationBarComponent implements OnInit {
+  faWindowClose = faWindowClose
+  isCollapsed: boolean = true
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  closeButton(){
+    this.isCollapsed = false
   }
 
 }

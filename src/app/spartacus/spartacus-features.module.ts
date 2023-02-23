@@ -66,10 +66,12 @@ import { QualtricsFeatureModule } from './features/qualtrics/qualtrics-feature.m
 import { CustomHeaderComponent } from '../custom-header/custom-header.component';
 import { InformationBarComponent } from '../information-bar/information-bar.component';
 import { CustomBannerComponent } from '../custom-banner/custom-banner.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProductAlbumComponent } from '../product-album/product-album.component';
 
 
 @NgModule({
-  declarations: [CustomHeaderComponent, InformationBarComponent, CustomBannerComponent],
+  declarations: [CustomHeaderComponent, InformationBarComponent, CustomBannerComponent, ProductAlbumComponent],
   imports: [
     CommonModule,
     AsmComponentsModule,
@@ -135,9 +137,15 @@ import { CustomBannerComponent } from '../custom-banner/custom-banner.component'
     UserFeatureModule,
     AsmFeatureModule,
     QualtricsFeatureModule,
-    GenericLinkModule
+    GenericLinkModule,
+    FontAwesomeModule
   ],
   providers: [
+    provideOutlet({
+      id: 'UpSelling',
+      position: OutletPosition.BEFORE,
+      component: ProductAlbumComponent,
+    }),
     provideOutlet({
       id: 'SiteLogo',
       position: OutletPosition.REPLACE,
