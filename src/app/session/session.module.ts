@@ -8,8 +8,8 @@ import { CmsConfig, ConfigModule } from "@spartacus/core";
     CommonModule,
     ConfigModule.withConfig({
       logoutConfig: {
-        enable: true,
-        logoutTimeout: 3000
+        enable: false,
+        logoutTimeout: 5000
       }
     } as CmsConfig)
   ]

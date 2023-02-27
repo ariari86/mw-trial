@@ -18,7 +18,10 @@
     color: white;
   }
 
-  p {
+  .size {
+    font-size: 20px;
+    color: black;
+    animation: rightToLeft 5s;
     font-size: var(--cx-font-size, 1rem);
   }
 }
@@ -36,8 +39,14 @@
 
 @keyframes blinken {
   0% {background-color: rgb(247, 226, 219); box-shadow: 1px 5px 10px rgba(9, 7, 7, 0.9);}
-  25% {background-color: rgb(115, 255, 0); box-shadow: 1px 5px 10px rgba(200,20,20, 0.9);}
-  50% {background-color: rgb(255, 230, 0); box-shadow: 1px 5px 10px rgba(200,20,20, 0.9);}
-  75% {background-color: rgb(255, 187, 0); box-shadow: 1px 5px 10px rgba(200,20,20, 0.9);}
-  100% {background-color: rgb(255, 60, 0); box-shadow: 1px 5px 310x rgba(200,20,20, 0.9);}
+  50% {background-color: rgb(255, 187, 0); box-shadow: 1px 5px 10px rgba(200,20,20, 0.9);}
+  100% {background-color: rgb(106, 104, 104); box-shadow: 1px 5px 310x rgba(200,20,20, 0.9);}
 }
+
+
+@keyframes rightToLeft {
+  0% {transform: translate(600px);}
+  100% {transform: translate(-10px);}
+}
+
+

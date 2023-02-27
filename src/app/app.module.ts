@@ -37,8 +37,8 @@ export const translationOverWrites = {
     ConfigModule.withConfig(
       {logoutConfig:
         {
-          enable: true,
-          logoutTimeout: 3000000
+          enable: false,
+          logoutTimeout: 5000
         }
       } as CmsConfig
       )
