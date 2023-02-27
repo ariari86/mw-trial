@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
+import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-information-bar',
@@ -8,6 +9,7 @@ import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 })
 export class InformationBarComponent implements OnInit {
   faWindowClose = faWindowClose
+  faSkullCrossbones = faSkullCrossbones
   isCollapsed: boolean = true
 
   constructor() { }

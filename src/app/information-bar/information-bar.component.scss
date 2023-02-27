@@ -1,3 +1,14 @@
+.movement {
+  animation: rightToLeft-2 50s infinite;
+  color: rgb(0, 0, 255);
+  font-weight: bolder;
+
+  .icon {
+    font-size: 50px;
+    color: red;
+  }
+}
+
 .main {
   display: flex;
   justify-content: center;
@@ -47,6 +58,11 @@
 @keyframes rightToLeft {
   0% {transform: translate(600px);}
   100% {transform: translate(-10px);}
+}
+
+@keyframes rightToLeft-2 {
+  0% {transform: translate(1900px);}
+  100% {transform: translate(-300px);}
 }
 
 
