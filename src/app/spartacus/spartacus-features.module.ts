@@ -68,6 +68,7 @@ import { InformationBarComponent } from '../information-bar/information-bar.comp
 import { CustomBannerComponent } from '../custom-banner/custom-banner.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductAlbumComponent } from '../product-album/product-album.component';
+import { PdpModule } from '../pdp/pdp.module';
 
 
 @NgModule({
@@ -138,7 +139,8 @@ import { ProductAlbumComponent } from '../product-album/product-album.component'
     AsmFeatureModule,
     QualtricsFeatureModule,
     GenericLinkModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    PdpModule
   ],
   providers: [
     provideOutlet({

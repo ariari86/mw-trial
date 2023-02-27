@@ -1,0 +1,4 @@
+<ng-container *ngIf="product$ | async as product">
+  <p>Price: {{ product?.price.formatValue }}</p>
+  <div class="description-tag" [innerHTML]="product?.description"></div>
+</ng-container>
